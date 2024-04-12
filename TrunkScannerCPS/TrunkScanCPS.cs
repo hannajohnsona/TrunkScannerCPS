@@ -12,7 +12,7 @@ namespace TrunkScannerCPS
     public partial class Form1 : Form
     {
         private Codeplug currentCodeplug;
-        private static string appVersion = "R01.00.00";
+        private static string appVersion = "R01.02.00";
         private AppType currentAppType = AppType.CPS;
 
         public Form1()
@@ -176,7 +176,32 @@ namespace TrunkScannerCPS
             else if (e.Node.Level == 1 && e.Node.Parent != null && e.Node.Parent.Text == "Scan Lists")
             {
                 txtScanListName.Text = e.Node.Text;
+                var scanList = currentCodeplug.ScanLists.FirstOrDefault(sl => sl.Name == e.Node.Text);
+                if (scanList != null)
+                {
+                    var channels = currentCodeplug.Zones.SelectMany(z => z.Channels).ToList();
+                    PopulateChannelsComboBox(channels, scanList);
+                }
             }
+        }
+
+        private void PopulateChannelsComboBox(List<Channel> channels, ScanList currentScanList)
+        {
+            cmbChannels.Items.Clear();
+            var existingTgids = new HashSet<string>(currentScanList.Items.Select(item => item.Tgid));
+
+            foreach (var channel in channels)
+            {
+                if (!existingTgids.Contains(channel.Tgid))
+                {
+                    cmbChannels.Items.Add($"{channel.Alias} ({channel.Tgid})");
+                }
+            }
+
+            if (cmbChannels.Items.Count > 0)
+                cmbChannels.SelectedIndex = 0;
+            else
+                cmbChannels.Text = "No available channels";
         }
 
         private void PopulateScanListComboBox(string selectedScanListName)
@@ -444,8 +469,16 @@ namespace TrunkScannerCPS
                 string newName = txtScanListName.Text.Trim();
                 if (!string.IsNullOrWhiteSpace(newName))
                 {
+                    if (currentCodeplug.ScanLists.Any(sl => sl.Name.Equals(newName, StringComparison.OrdinalIgnoreCase) && sl != scanList))
+                    {
+                        MessageBox.Show("Another scan list with this name already exists.", "Error");
+                        return;
+                    }
+
                     scanList.Name = newName;
                     treeView1.SelectedNode.Text = newName;
+
+                    MessageBox.Show("Scan list name updated successfully.", "Success");
                 }
                 else
                 {
@@ -458,30 +491,29 @@ namespace TrunkScannerCPS
             }
         }
 
-
-
-
         private void btnAddChannelToScanList_Click(object sender, EventArgs e)
         {
-            if (treeView1.SelectedNode?.Tag is ScanList scanList)
+            if (treeView1.SelectedNode?.Tag is ScanList scanList && cmbChannels.SelectedItem != null)
             {
-                string channelAlias = txtChannelName.Text;
-                string channelTgid = txtTgid.Text;
+                string selectedItem = cmbChannels.SelectedItem.ToString();
+                var parts = selectedItem.Split(new string[] { " (" }, StringSplitOptions.None);
+                string alias = parts[0];
+                string tgid = parts[1].TrimEnd(')');
 
-                if (!string.IsNullOrWhiteSpace(channelAlias) && !string.IsNullOrWhiteSpace(channelTgid))
-                {
-                    ScanListItem newItem = new ScanListItem { Alias = channelAlias, Tgid = channelTgid };
-                    scanList.Items.Add(newItem);
+                ScanListItem newItem = new ScanListItem { Alias = alias, Tgid = tgid };
+                scanList.Items.Add(newItem);
 
-                    TreeNode newNode = new TreeNode($"{newItem.Alias} ({newItem.Tgid})");
-                    treeView1.SelectedNode.Nodes.Add(newNode);
-                }
-                else
-                {
-                    MessageBox.Show("Channel details cannot be empty.", "Error");
-                }
+                TreeNode newNode = new TreeNode($"{newItem.Alias} ({newItem.Tgid})");
+                treeView1.SelectedNode.Nodes.Add(newNode);
+
+                PopulateChannelsComboBox(currentCodeplug.Zones.SelectMany(z => z.Channels).ToList(), scanList);
+            }
+            else
+            {
+                MessageBox.Show("Please select a channel to add.", "Error");
             }
         }
+
 
         private void btnRemoveChannelFromScanList_Click(object sender, EventArgs e)
         {
@@ -499,5 +531,48 @@ namespace TrunkScannerCPS
                 }
             }
         }
+
+        private void btnAddScanList_Click(object sender, EventArgs e)
+        {
+            string newScanListName = "new list";
+            if (!string.IsNullOrWhiteSpace(newScanListName))
+            {
+                if (!currentCodeplug.ScanLists.Any(sl => sl.Name.Equals(newScanListName, StringComparison.OrdinalIgnoreCase)))
+                {
+                    ScanList newScanList = new ScanList { Name = newScanListName };
+                    currentCodeplug.ScanLists.Add(newScanList);
+                    TreeNode newNode = new TreeNode(newScanList.Name) { Tag = newScanList };
+                    TreeNode parentNode = treeView1.Nodes.Cast<TreeNode>().FirstOrDefault(n => n.Text == "Scan Lists");
+                    parentNode?.Nodes.Add(newNode);
+                    parentNode?.Expand();
+                }
+                else
+                {
+                    MessageBox.Show("A scan list with this name already exists.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Scan list name cannot be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnDeleteScanList_Click(object sender, EventArgs e)
+        {
+            if (treeView1.SelectedNode != null && treeView1.SelectedNode.Parent != null &&
+                treeView1.SelectedNode.Parent.Text == "Scan Lists" && treeView1.SelectedNode.Tag is ScanList scanList)
+            {
+                if (MessageBox.Show("Are you sure you want to delete this scan list?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    currentCodeplug.ScanLists.Remove(scanList);
+                    treeView1.Nodes.Remove(treeView1.SelectedNode);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a scan list to delete.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
     }
 }
