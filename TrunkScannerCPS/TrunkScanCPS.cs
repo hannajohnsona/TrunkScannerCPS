@@ -4,8 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Security.Policy;
 using System.Windows.Forms;
-
+using Krypton.Toolkit;
 using Newtonsoft.Json;
+using TrunkScannerCPS.Properties;
 
 namespace TrunkScannerCPS
 {
@@ -21,6 +22,7 @@ namespace TrunkScannerCPS
             InitializeComponent();
             this.Text = $"TrunkScan {currentAppType.Name}. Version: {appVersion}";
             AdjustFieldEditability();
+            Theme();
         }
 
         private void AdjustFieldEditability()
@@ -35,6 +37,7 @@ namespace TrunkScannerCPS
             {
                 case "CPS":
                     // Nothing editable in CPS
+                    labThemeButton.Visible = false;
                     break;
                 case "Depot":
                     // For Depot, serial and model can change
@@ -42,6 +45,7 @@ namespace TrunkScannerCPS
                     isSerialNumberEnabled = true;
                     isModelEnabled = true;
                     isBornSysIDEnabled = true;
+                    labThemeButton.Visible = false;
                     break;
                 case "Labtool":
                 case "PhpSplutions":
@@ -52,6 +56,7 @@ namespace TrunkScannerCPS
                     isCodeplugVersionEnabled = true;
                     isLastProgramSrcEnabled = true;
                     isBornSysIDEnabled = true;
+                    labThemeButton.Visible = true;
                     break;
             }
 
@@ -1423,6 +1428,54 @@ namespace TrunkScannerCPS
                     Console.Write($"Error in syskey: {ex}");
                     MessageBox.Show("SysKey is not valid for this system ID.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void helpRibbonQButton_Click(object sender, EventArgs e)
+        {
+            AboutBox1 about = new AboutBox1();
+            about.ShowDialog();
+        }
+
+        private void lightThemeButton_Click(object sender, EventArgs e)
+        {
+            kryptonRibbon1.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007Blue;
+            kryptonManager1.GlobalPaletteMode = Krypton.Toolkit.PaletteMode.Office2007Blue;
+            Properties.Settings.Default.Theme = "Light";
+            Settings.Default.Save();
+        }
+
+        private void darkThemeButton_Click(object sender, EventArgs e)
+        {
+            kryptonRibbon1.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007Silver;
+            kryptonManager1.GlobalPaletteMode = Krypton.Toolkit.PaletteMode.Office2007Silver;
+            Properties.Settings.Default.Theme = "Dark";
+            Settings.Default.Save();
+        }
+
+        private void labThemeButton_Click(object sender, EventArgs e)
+        {
+            kryptonRibbon1.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007BlackDarkMode;
+            kryptonManager1.GlobalPaletteMode = Krypton.Toolkit.PaletteMode.Office2007BlackDarkMode;
+            Properties.Settings.Default.Theme = "Lab";
+            Settings.Default.Save();
+        }
+        private void Theme()
+        {
+            if (Settings.Default.Theme == "Light")
+            {
+                kryptonManager1.GlobalPaletteMode = PaletteMode.Office2007Blue;
+                kryptonRibbon1.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007Blue;
+            }
+            else if (Settings.Default.Theme == "Dark")
+            {
+                kryptonManager1.GlobalPaletteMode = PaletteMode.Office2007Silver;
+                kryptonRibbon1.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007Silver;
+            }
+            else if (Settings.Default.Theme == "Lab")
+            {
+                kryptonManager1.GlobalPaletteMode = PaletteMode.Office2007BlackDarkMode;
+                kryptonRibbon1.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007BlackDarkMode;
             }
         }
     }

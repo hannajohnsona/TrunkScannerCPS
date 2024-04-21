@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.btnLoadCodeplug = new System.Windows.Forms.Button();
             this.txtChannelName = new System.Windows.Forms.TextBox();
@@ -42,7 +43,6 @@
             this.btnSaveZoneName = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
             this.txtBornSysID = new System.Windows.Forms.TextBox();
@@ -59,68 +59,73 @@
             this.btnRemoveChannelFromScanList = new System.Windows.Forms.Button();
             this.txtScanListName = new System.Windows.Forms.TextBox();
             this.cmbScanList = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.txtHomeSysID = new System.Windows.Forms.TextBox();
             this.cmbRadioMode = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.cmbControlHead = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.cmbTtsEnabled = new System.Windows.Forms.ComboBox();
-            this.chkSecondaryRadioTx = new System.Windows.Forms.CheckBox();
             this.cmbChannels = new System.Windows.Forms.ComboBox();
             this.btnAddScanList = new System.Windows.Forms.Button();
             this.btnDeleteScanList = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.txtChannelFrequncy = new System.Windows.Forms.TextBox();
             this.cmbChannelMode = new System.Windows.Forms.ComboBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btnLoadSysKey = new System.Windows.Forms.Button();
             this.txtIsSyskeyPresent = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.chkRequireSysKey = new System.Windows.Forms.CheckBox();
-            this.chkEnforceSysID = new System.Windows.Forms.CheckBox();
-            this.chkCpgPassword = new System.Windows.Forms.CheckBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.kryptonRibbon1 = new Krypton.Ribbon.KryptonRibbon();
-            this.openRibbonQButton = new Krypton.Ribbon.KryptonRibbonQATButton();
-            this.saveRibbonQButton = new Krypton.Ribbon.KryptonRibbonQATButton();
             this.openStartMenu = new Krypton.Toolkit.KryptonContextMenuItem();
             this.saveStartMenu = new Krypton.Toolkit.KryptonContextMenuItem();
             this.loadskeyStartMenu = new Krypton.Toolkit.KryptonContextMenuItem();
             this.kryptonContextMenuSeparator1 = new Krypton.Toolkit.KryptonContextMenuSeparator();
             this.exitStartMenu = new Krypton.Toolkit.KryptonContextMenuItem();
             this.kryptonRibbonTab1 = new Krypton.Ribbon.KryptonRibbonTab();
-            this.kryptonRibbonGroup1 = new Krypton.Ribbon.KryptonRibbonGroup();
-            this.kryptonRibbonGroupTriple1 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
-            this.readCodeplugRibbonButton = new Krypton.Ribbon.KryptonRibbonGroupButton();
-            this.saveCodeplugRibbonButton = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonTab2 = new Krypton.Ribbon.KryptonRibbonTab();
-            this.kryptonRibbonGroup2 = new Krypton.Ribbon.KryptonRibbonGroup();
-            this.kryptonRibbonGroupTriple2 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
-            this.readDeviceRibbonButton = new Krypton.Ribbon.KryptonRibbonGroupButton();
-            this.writeDeviceRibbonButton = new Krypton.Ribbon.KryptonRibbonGroupButton();
-            this.loadskeyRibbonButton = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.kryptonRibbonTab3 = new Krypton.Ribbon.KryptonRibbonTab();
+            this.openRibbonQButton = new Krypton.Ribbon.KryptonRibbonQATButton();
+            this.saveRibbonQButton = new Krypton.Ribbon.KryptonRibbonQATButton();
+            this.helpRibbonQButton = new Krypton.Ribbon.KryptonRibbonQATButton();
+            this.kryptonRibbonGroup1 = new Krypton.Ribbon.KryptonRibbonGroup();
+            this.kryptonRibbonGroupTriple1 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.readCodeplugRibbonButton = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.saveCodeplugRibbonButton = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroup2 = new Krypton.Ribbon.KryptonRibbonGroup();
+            this.kryptonRibbonGroupTriple2 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.readDeviceRibbonButton = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.writeDeviceRibbonButton = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.loadskeyRibbonButton = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroup3 = new Krypton.Ribbon.KryptonRibbonGroup();
+            this.kryptonRibbonGroupTriple3 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.lightThemeButton = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.darkThemeButton = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.labThemeButton = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonManager1 = new Krypton.Toolkit.KryptonManager(this.components);
+            this.kryptonGroupBox1 = new Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonGroupBox2 = new Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonGroupBox3 = new Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonGroupBox4 = new Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonGroupBox5 = new Krypton.Toolkit.KryptonGroupBox();
+            this.label3 = new Krypton.Toolkit.KryptonLabel();
+            this.label8 = new Krypton.Toolkit.KryptonLabel();
+            this.label9 = new Krypton.Toolkit.KryptonLabel();
+            this.label10 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel4 = new Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel5 = new Krypton.Toolkit.KryptonLabel();
+            this.chkCpgPassword = new Krypton.Toolkit.KryptonCheckBox();
+            this.chkSecondaryRadioTx = new Krypton.Toolkit.KryptonCheckBox();
+            this.chkRequireSysKey = new Krypton.Toolkit.KryptonCheckBox();
+            this.chkEnforceSysID = new Krypton.Toolkit.KryptonCheckBox();
+            this.kryptonGroupBox6 = new Krypton.Toolkit.KryptonGroupBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -128,6 +133,30 @@
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
+            this.kryptonGroupBox1.Panel.SuspendLayout();
+            this.kryptonGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).BeginInit();
+            this.kryptonGroupBox2.Panel.SuspendLayout();
+            this.kryptonGroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3.Panel)).BeginInit();
+            this.kryptonGroupBox3.Panel.SuspendLayout();
+            this.kryptonGroupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox4.Panel)).BeginInit();
+            this.kryptonGroupBox4.Panel.SuspendLayout();
+            this.kryptonGroupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox5.Panel)).BeginInit();
+            this.kryptonGroupBox5.Panel.SuspendLayout();
+            this.kryptonGroupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox6.Panel)).BeginInit();
+            this.kryptonGroupBox6.Panel.SuspendLayout();
+            this.kryptonGroupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // treeView1
@@ -151,21 +180,21 @@
             // 
             // txtChannelName
             // 
-            this.txtChannelName.Location = new System.Drawing.Point(97, 18);
+            this.txtChannelName.Location = new System.Drawing.Point(114, 10);
             this.txtChannelName.Name = "txtChannelName";
             this.txtChannelName.Size = new System.Drawing.Size(117, 20);
             this.txtChannelName.TabIndex = 2;
             // 
             // txtTgid
             // 
-            this.txtTgid.Location = new System.Drawing.Point(97, 40);
+            this.txtTgid.Location = new System.Drawing.Point(114, 32);
             this.txtTgid.Name = "txtTgid";
             this.txtTgid.Size = new System.Drawing.Size(117, 20);
             this.txtTgid.TabIndex = 3;
             // 
             // btnAddChannel
             // 
-            this.btnAddChannel.Location = new System.Drawing.Point(28, 159);
+            this.btnAddChannel.Location = new System.Drawing.Point(45, 151);
             this.btnAddChannel.Name = "btnAddChannel";
             this.btnAddChannel.Size = new System.Drawing.Size(152, 23);
             this.btnAddChannel.TabIndex = 4;
@@ -175,7 +204,7 @@
             // 
             // btnDeleteChannel
             // 
-            this.btnDeleteChannel.Location = new System.Drawing.Point(28, 188);
+            this.btnDeleteChannel.Location = new System.Drawing.Point(45, 180);
             this.btnDeleteChannel.Name = "btnDeleteChannel";
             this.btnDeleteChannel.Size = new System.Drawing.Size(152, 23);
             this.btnDeleteChannel.TabIndex = 5;
@@ -185,7 +214,7 @@
             // 
             // btnSaveChannel
             // 
-            this.btnSaveChannel.Location = new System.Drawing.Point(28, 130);
+            this.btnSaveChannel.Location = new System.Drawing.Point(45, 122);
             this.btnSaveChannel.Name = "btnSaveChannel";
             this.btnSaveChannel.Size = new System.Drawing.Size(152, 23);
             this.btnSaveChannel.TabIndex = 6;
@@ -195,7 +224,7 @@
             // 
             // btnAddZone
             // 
-            this.btnAddZone.Location = new System.Drawing.Point(6, 98);
+            this.btnAddZone.Location = new System.Drawing.Point(8, 89);
             this.btnAddZone.Name = "btnAddZone";
             this.btnAddZone.Size = new System.Drawing.Size(63, 23);
             this.btnAddZone.TabIndex = 7;
@@ -205,7 +234,7 @@
             // 
             // btnDeleteZone
             // 
-            this.btnDeleteZone.Location = new System.Drawing.Point(75, 98);
+            this.btnDeleteZone.Location = new System.Drawing.Point(77, 89);
             this.btnDeleteZone.Name = "btnDeleteZone";
             this.btnDeleteZone.Size = new System.Drawing.Size(101, 23);
             this.btnDeleteZone.TabIndex = 8;
@@ -226,14 +255,14 @@
             // 
             // txtZoneName
             // 
-            this.txtZoneName.Location = new System.Drawing.Point(57, 19);
+            this.txtZoneName.Location = new System.Drawing.Point(59, 10);
             this.txtZoneName.Name = "txtZoneName";
             this.txtZoneName.Size = new System.Drawing.Size(117, 20);
             this.txtZoneName.TabIndex = 10;
             // 
             // btnSaveZoneName
             // 
-            this.btnSaveZoneName.Location = new System.Drawing.Point(9, 69);
+            this.btnSaveZoneName.Location = new System.Drawing.Point(11, 60);
             this.btnSaveZoneName.Name = "btnSaveZoneName";
             this.btnSaveZoneName.Size = new System.Drawing.Size(167, 23);
             this.btnSaveZoneName.TabIndex = 11;
@@ -244,7 +273,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 26);
+            this.label1.Location = new System.Drawing.Point(65, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 12;
@@ -253,20 +282,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 49);
+            this.label2.Location = new System.Drawing.Point(67, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 13;
             this.label2.Text = "TGID:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Name:";
             // 
             // groupBox1
             // 
@@ -369,7 +389,7 @@
             // 
             // btnRenameScanList
             // 
-            this.btnRenameScanList.Location = new System.Drawing.Point(24, 122);
+            this.btnRenameScanList.Location = new System.Drawing.Point(30, 114);
             this.btnRenameScanList.Name = "btnRenameScanList";
             this.btnRenameScanList.Size = new System.Drawing.Size(117, 23);
             this.btnRenameScanList.TabIndex = 16;
@@ -379,7 +399,7 @@
             // 
             // btnAddChannelToScanList
             // 
-            this.btnAddChannelToScanList.Location = new System.Drawing.Point(6, 42);
+            this.btnAddChannelToScanList.Location = new System.Drawing.Point(12, 34);
             this.btnAddChannelToScanList.Name = "btnAddChannelToScanList";
             this.btnAddChannelToScanList.Size = new System.Drawing.Size(75, 23);
             this.btnAddChannelToScanList.TabIndex = 17;
@@ -389,7 +409,7 @@
             // 
             // btnRemoveChannelFromScanList
             // 
-            this.btnRemoveChannelFromScanList.Location = new System.Drawing.Point(87, 42);
+            this.btnRemoveChannelFromScanList.Location = new System.Drawing.Point(93, 34);
             this.btnRemoveChannelFromScanList.Name = "btnRemoveChannelFromScanList";
             this.btnRemoveChannelFromScanList.Size = new System.Drawing.Size(99, 23);
             this.btnRemoveChannelFromScanList.TabIndex = 18;
@@ -399,7 +419,7 @@
             // 
             // txtScanListName
             // 
-            this.txtScanListName.Location = new System.Drawing.Point(66, 98);
+            this.txtScanListName.Location = new System.Drawing.Point(72, 90);
             this.txtScanListName.Name = "txtScanListName";
             this.txtScanListName.Size = new System.Drawing.Size(117, 20);
             this.txtScanListName.TabIndex = 19;
@@ -407,85 +427,21 @@
             // cmbScanList
             // 
             this.cmbScanList.FormattingEnabled = true;
-            this.cmbScanList.Location = new System.Drawing.Point(57, 45);
+            this.cmbScanList.Location = new System.Drawing.Point(59, 36);
             this.cmbScanList.Name = "cmbScanList";
             this.cmbScanList.Size = new System.Drawing.Size(117, 21);
             this.cmbScanList.TabIndex = 20;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 48);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 13);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Scan List:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 101);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 13);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "List Name:";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.txtPassword);
-            this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.txtHomeSysID);
-            this.groupBox2.Controls.Add(this.cmbRadioMode);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.cmbControlHead);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.cmbTtsEnabled);
-            this.groupBox2.Location = new System.Drawing.Point(6, 7);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(211, 201);
-            this.groupBox2.TabIndex = 23;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Settings";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(16, 105);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(72, 13);
-            this.label16.TabIndex = 10;
-            this.label16.Text = "Home Sys ID:";
-            // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(94, 129);
+            this.txtPassword.Location = new System.Drawing.Point(131, 130);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(106, 20);
             this.txtPassword.TabIndex = 34;
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(7, 132);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(81, 13);
-            this.label18.TabIndex = 35;
-            this.label18.Text = "CPG Password:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(51, 79);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(37, 13);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "Mode:";
-            // 
             // txtHomeSysID
             // 
-            this.txtHomeSysID.Location = new System.Drawing.Point(94, 102);
+            this.txtHomeSysID.Location = new System.Drawing.Point(131, 103);
             this.txtHomeSysID.Name = "txtHomeSysID";
             this.txtHomeSysID.Size = new System.Drawing.Size(106, 20);
             this.txtHomeSysID.TabIndex = 9;
@@ -493,68 +449,39 @@
             // cmbRadioMode
             // 
             this.cmbRadioMode.FormattingEnabled = true;
-            this.cmbRadioMode.Location = new System.Drawing.Point(94, 75);
+            this.cmbRadioMode.Location = new System.Drawing.Point(131, 76);
             this.cmbRadioMode.Name = "cmbRadioMode";
             this.cmbRadioMode.Size = new System.Drawing.Size(106, 21);
             this.cmbRadioMode.TabIndex = 4;
             this.cmbRadioMode.SelectedIndexChanged += new System.EventHandler(this.cmbRadioMode_SelectedIndexChanged);
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(36, 52);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 13);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "CH Type:";
-            // 
             // cmbControlHead
             // 
             this.cmbControlHead.FormattingEnabled = true;
-            this.cmbControlHead.Location = new System.Drawing.Point(94, 48);
+            this.cmbControlHead.Location = new System.Drawing.Point(131, 49);
             this.cmbControlHead.Name = "cmbControlHead";
             this.cmbControlHead.Size = new System.Drawing.Size(106, 21);
             this.cmbControlHead.TabIndex = 2;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 26);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 13);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "TTS Enabled:";
-            // 
             // cmbTtsEnabled
             // 
             this.cmbTtsEnabled.FormattingEnabled = true;
-            this.cmbTtsEnabled.Location = new System.Drawing.Point(94, 22);
+            this.cmbTtsEnabled.Location = new System.Drawing.Point(131, 23);
             this.cmbTtsEnabled.Name = "cmbTtsEnabled";
             this.cmbTtsEnabled.Size = new System.Drawing.Size(106, 21);
             this.cmbTtsEnabled.TabIndex = 0;
             // 
-            // chkSecondaryRadioTx
-            // 
-            this.chkSecondaryRadioTx.AutoSize = true;
-            this.chkSecondaryRadioTx.Location = new System.Drawing.Point(6, 19);
-            this.chkSecondaryRadioTx.Name = "chkSecondaryRadioTx";
-            this.chkSecondaryRadioTx.Size = new System.Drawing.Size(125, 17);
-            this.chkSecondaryRadioTx.TabIndex = 6;
-            this.chkSecondaryRadioTx.Text = "Secondary Radio TX";
-            this.chkSecondaryRadioTx.UseVisualStyleBackColor = true;
-            this.chkSecondaryRadioTx.CheckedChanged += new System.EventHandler(this.chkSecondaryRadioTx_CheckedChanged);
-            // 
             // cmbChannels
             // 
             this.cmbChannels.FormattingEnabled = true;
-            this.cmbChannels.Location = new System.Drawing.Point(6, 15);
+            this.cmbChannels.Location = new System.Drawing.Point(12, 7);
             this.cmbChannels.Name = "cmbChannels";
             this.cmbChannels.Size = new System.Drawing.Size(156, 21);
             this.cmbChannels.TabIndex = 24;
             // 
             // btnAddScanList
             // 
-            this.btnAddScanList.Location = new System.Drawing.Point(6, 71);
+            this.btnAddScanList.Location = new System.Drawing.Point(12, 63);
             this.btnAddScanList.Name = "btnAddScanList";
             this.btnAddScanList.Size = new System.Drawing.Size(75, 23);
             this.btnAddScanList.TabIndex = 25;
@@ -564,7 +491,7 @@
             // 
             // btnDeleteScanList
             // 
-            this.btnDeleteScanList.Location = new System.Drawing.Point(87, 71);
+            this.btnDeleteScanList.Location = new System.Drawing.Point(93, 63);
             this.btnDeleteScanList.Name = "btnDeleteScanList";
             this.btnDeleteScanList.Size = new System.Drawing.Size(75, 23);
             this.btnDeleteScanList.TabIndex = 26;
@@ -572,47 +499,10 @@
             this.btnDeleteScanList.UseVisualStyleBackColor = true;
             this.btnDeleteScanList.Click += new System.EventHandler(this.btnDeleteScanList_Click);
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.btnAddScanList);
-            this.groupBox3.Controls.Add(this.cmbChannels);
-            this.groupBox3.Controls.Add(this.btnDeleteScanList);
-            this.groupBox3.Controls.Add(this.btnRenameScanList);
-            this.groupBox3.Controls.Add(this.txtScanListName);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.btnAddChannelToScanList);
-            this.groupBox3.Controls.Add(this.btnRemoveChannelFromScanList);
-            this.groupBox3.Location = new System.Drawing.Point(6, 7);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(186, 145);
-            this.groupBox3.TabIndex = 27;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Scan";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.label14);
-            this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Controls.Add(this.txtChannelFrequncy);
-            this.groupBox4.Controls.Add(this.cmbChannelMode);
-            this.groupBox4.Controls.Add(this.txtChannelName);
-            this.groupBox4.Controls.Add(this.label1);
-            this.groupBox4.Controls.Add(this.label2);
-            this.groupBox4.Controls.Add(this.txtTgid);
-            this.groupBox4.Controls.Add(this.btnSaveChannel);
-            this.groupBox4.Controls.Add(this.btnDeleteChannel);
-            this.groupBox4.Controls.Add(this.btnAddChannel);
-            this.groupBox4.Location = new System.Drawing.Point(6, 7);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(234, 219);
-            this.groupBox4.TabIndex = 28;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Channel";
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(50, 95);
+            this.label14.Location = new System.Drawing.Point(67, 87);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(37, 13);
             this.label14.TabIndex = 17;
@@ -621,7 +511,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(2, 69);
+            this.label13.Location = new System.Drawing.Point(19, 61);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(85, 13);
             this.label13.TabIndex = 16;
@@ -629,7 +519,7 @@
             // 
             // txtChannelFrequncy
             // 
-            this.txtChannelFrequncy.Location = new System.Drawing.Point(97, 66);
+            this.txtChannelFrequncy.Location = new System.Drawing.Point(114, 58);
             this.txtChannelFrequncy.Name = "txtChannelFrequncy";
             this.txtChannelFrequncy.Size = new System.Drawing.Size(117, 20);
             this.txtChannelFrequncy.TabIndex = 15;
@@ -637,27 +527,11 @@
             // cmbChannelMode
             // 
             this.cmbChannelMode.FormattingEnabled = true;
-            this.cmbChannelMode.Location = new System.Drawing.Point(97, 92);
+            this.cmbChannelMode.Location = new System.Drawing.Point(114, 84);
             this.cmbChannelMode.Name = "cmbChannelMode";
             this.cmbChannelMode.Size = new System.Drawing.Size(117, 21);
             this.cmbChannelMode.TabIndex = 14;
             this.cmbChannelMode.SelectedIndexChanged += new System.EventHandler(this.cmbChannelMode_SelectedIndexChanged);
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.txtZoneName);
-            this.groupBox5.Controls.Add(this.label3);
-            this.groupBox5.Controls.Add(this.btnSaveZoneName);
-            this.groupBox5.Controls.Add(this.btnAddZone);
-            this.groupBox5.Controls.Add(this.label8);
-            this.groupBox5.Controls.Add(this.btnDeleteZone);
-            this.groupBox5.Controls.Add(this.cmbScanList);
-            this.groupBox5.Location = new System.Drawing.Point(6, 9);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(186, 140);
-            this.groupBox5.TabIndex = 28;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Zone";
             // 
             // btnLoadSysKey
             // 
@@ -673,63 +547,10 @@
             // txtIsSyskeyPresent
             // 
             this.txtIsSyskeyPresent.Enabled = false;
-            this.txtIsSyskeyPresent.Location = new System.Drawing.Point(101, 8);
+            this.txtIsSyskeyPresent.Location = new System.Drawing.Point(127, 3);
             this.txtIsSyskeyPresent.Name = "txtIsSyskeyPresent";
             this.txtIsSyskeyPresent.Size = new System.Drawing.Size(56, 20);
             this.txtIsSyskeyPresent.TabIndex = 30;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(9, 12);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(87, 13);
-            this.label15.TabIndex = 31;
-            this.label15.Text = "SysKey Present?";
-            // 
-            // chkRequireSysKey
-            // 
-            this.chkRequireSysKey.AutoSize = true;
-            this.chkRequireSysKey.Location = new System.Drawing.Point(6, 65);
-            this.chkRequireSysKey.Name = "chkRequireSysKey";
-            this.chkRequireSysKey.Size = new System.Drawing.Size(107, 17);
-            this.chkRequireSysKey.TabIndex = 8;
-            this.chkRequireSysKey.Text = "Require SysKey?";
-            this.chkRequireSysKey.UseVisualStyleBackColor = true;
-            // 
-            // chkEnforceSysID
-            // 
-            this.chkEnforceSysID.AutoSize = true;
-            this.chkEnforceSysID.Location = new System.Drawing.Point(6, 88);
-            this.chkEnforceSysID.Name = "chkEnforceSysID";
-            this.chkEnforceSysID.Size = new System.Drawing.Size(100, 17);
-            this.chkEnforceSysID.TabIndex = 11;
-            this.chkEnforceSysID.Text = "Enforce SysID?";
-            this.chkEnforceSysID.UseVisualStyleBackColor = true;
-            // 
-            // chkCpgPassword
-            // 
-            this.chkCpgPassword.AutoSize = true;
-            this.chkCpgPassword.Location = new System.Drawing.Point(6, 42);
-            this.chkCpgPassword.Name = "chkCpgPassword";
-            this.chkCpgPassword.Size = new System.Drawing.Size(103, 17);
-            this.chkCpgPassword.TabIndex = 36;
-            this.chkCpgPassword.Text = "CPG Password?";
-            this.chkCpgPassword.UseVisualStyleBackColor = true;
-            this.chkCpgPassword.CheckedChanged += new System.EventHandler(this.chkCpgPassword_CheckedChanged);
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.chkSecondaryRadioTx);
-            this.groupBox6.Controls.Add(this.chkEnforceSysID);
-            this.groupBox6.Controls.Add(this.chkCpgPassword);
-            this.groupBox6.Controls.Add(this.chkRequireSysKey);
-            this.groupBox6.Location = new System.Drawing.Point(6, 36);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(200, 105);
-            this.groupBox6.TabIndex = 32;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Options";
             // 
             // kryptonRibbon1
             // 
@@ -739,7 +560,8 @@
             this.kryptonRibbon1.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007BlueLightMode;
             this.kryptonRibbon1.QATButtons.AddRange(new System.ComponentModel.Component[] {
             this.openRibbonQButton,
-            this.saveRibbonQButton});
+            this.saveRibbonQButton,
+            this.helpRibbonQButton});
             this.kryptonRibbon1.RibbonAppButton.AppButtonMenuItems.AddRange(new Krypton.Toolkit.KryptonContextMenuItemBase[] {
             this.openStartMenu,
             this.saveStartMenu,
@@ -748,22 +570,11 @@
             this.exitStartMenu});
             this.kryptonRibbon1.RibbonTabs.AddRange(new Krypton.Ribbon.KryptonRibbonTab[] {
             this.kryptonRibbonTab1,
-            this.kryptonRibbonTab2});
-            this.kryptonRibbon1.SelectedContext = null;
-            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab1;
+            this.kryptonRibbonTab2,
+            this.kryptonRibbonTab3});
+            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab3;
             this.kryptonRibbon1.Size = new System.Drawing.Size(845, 143);
             this.kryptonRibbon1.TabIndex = 33;
-            // 
-            // openRibbonQButton
-            // 
-            this.openRibbonQButton.Image = global::TrunkScannerCPS.Properties.Resources.Read_16x16;
-            this.openRibbonQButton.Click += new System.EventHandler(this.openRibbonQButton_Click);
-            // 
-            // saveRibbonQButton
-            // 
-            this.saveRibbonQButton.Enabled = false;
-            this.saveRibbonQButton.Image = global::TrunkScannerCPS.Properties.Resources.Save_16x16;
-            this.saveRibbonQButton.Click += new System.EventHandler(this.saveRibbonQButton_Click);
             // 
             // openStartMenu
             // 
@@ -791,6 +602,102 @@
             this.kryptonRibbonGroup1});
             this.kryptonRibbonTab1.Text = "Codeplug";
             // 
+            // kryptonRibbonTab2
+            // 
+            this.kryptonRibbonTab2.Groups.AddRange(new Krypton.Ribbon.KryptonRibbonGroup[] {
+            this.kryptonRibbonGroup2});
+            this.kryptonRibbonTab2.Text = "Device";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Location = new System.Drawing.Point(205, 149);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(422, 424);
+            this.tabControl1.TabIndex = 34;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.kryptonGroupBox1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(414, 398);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Zone";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.kryptonGroupBox2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(414, 398);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Channel";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.kryptonGroupBox3);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(414, 398);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Scan";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.kryptonGroupBox4);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(414, 398);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Settings";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.kryptonGroupBox5);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(414, 398);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Options";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // kryptonRibbonTab3
+            // 
+            this.kryptonRibbonTab3.Groups.AddRange(new Krypton.Ribbon.KryptonRibbonGroup[] {
+            this.kryptonRibbonGroup3});
+            this.kryptonRibbonTab3.Text = "Theme";
+            // 
+            // openRibbonQButton
+            // 
+            this.openRibbonQButton.Image = global::TrunkScannerCPS.Properties.Resources.Read_16x16;
+            this.openRibbonQButton.Click += new System.EventHandler(this.openRibbonQButton_Click);
+            // 
+            // saveRibbonQButton
+            // 
+            this.saveRibbonQButton.Enabled = false;
+            this.saveRibbonQButton.Image = global::TrunkScannerCPS.Properties.Resources.Save_16x16;
+            this.saveRibbonQButton.Click += new System.EventHandler(this.saveRibbonQButton_Click);
+            // 
+            // helpRibbonQButton
+            // 
+            this.helpRibbonQButton.Image = global::TrunkScannerCPS.Properties.Resources.help16x16;
+            this.helpRibbonQButton.Click += new System.EventHandler(this.helpRibbonQButton_Click);
+            // 
             // kryptonRibbonGroup1
             // 
             this.kryptonRibbonGroup1.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupContainer[] {
@@ -817,12 +724,6 @@
             this.saveCodeplugRibbonButton.TextLine1 = "Save";
             this.saveCodeplugRibbonButton.TextLine2 = "Codeplug";
             this.saveCodeplugRibbonButton.Click += new System.EventHandler(this.saveCodeplugRibbonButton_Click);
-            // 
-            // kryptonRibbonTab2
-            // 
-            this.kryptonRibbonTab2.Groups.AddRange(new Krypton.Ribbon.KryptonRibbonGroup[] {
-            this.kryptonRibbonGroup2});
-            this.kryptonRibbonTab2.Text = "Device";
             // 
             // kryptonRibbonGroup2
             // 
@@ -856,75 +757,253 @@
             this.loadskeyRibbonButton.TextLine2 = "SysKey";
             this.loadskeyRibbonButton.Click += new System.EventHandler(this.loadskeyRibbonButton_Click);
             // 
-            // tabControl1
+            // kryptonRibbonGroup3
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(205, 149);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(422, 424);
-            this.tabControl1.TabIndex = 34;
+            this.kryptonRibbonGroup3.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupContainer[] {
+            this.kryptonRibbonGroupTriple3});
             // 
-            // tabPage1
+            // kryptonRibbonGroupTriple3
             // 
-            this.tabPage1.Controls.Add(this.groupBox5);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(414, 398);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Zone";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.kryptonRibbonGroupTriple3.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.lightThemeButton,
+            this.darkThemeButton,
+            this.labThemeButton});
             // 
-            // tabPage2
+            // lightThemeButton
             // 
-            this.tabPage2.Controls.Add(this.groupBox4);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(414, 398);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Channel";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.lightThemeButton.ImageLarge = global::TrunkScannerCPS.Properties.Resources.light__1_;
+            this.lightThemeButton.TextLine1 = "Light";
+            this.lightThemeButton.TextLine2 = "Theme";
+            this.lightThemeButton.Click += new System.EventHandler(this.lightThemeButton_Click);
             // 
-            // tabPage3
+            // darkThemeButton
             // 
-            this.tabPage3.Controls.Add(this.groupBox3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(414, 398);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Scan";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.darkThemeButton.ImageLarge = global::TrunkScannerCPS.Properties.Resources.light1;
+            this.darkThemeButton.TextLine1 = "Dark ";
+            this.darkThemeButton.TextLine2 = "Theme";
+            this.darkThemeButton.Click += new System.EventHandler(this.darkThemeButton_Click);
             // 
-            // tabPage4
+            // labThemeButton
             // 
-            this.tabPage4.Controls.Add(this.groupBox2);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(414, 398);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Settings";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.labThemeButton.ImageLarge = global::TrunkScannerCPS.Properties.Resources.lightr;
+            this.labThemeButton.TextLine1 = "Lab";
+            this.labThemeButton.TextLine2 = "Theme";
+            this.labThemeButton.Click += new System.EventHandler(this.labThemeButton_Click);
             // 
-            // tabPage5
+            // kryptonGroupBox1
             // 
-            this.tabPage5.Controls.Add(this.groupBox6);
-            this.tabPage5.Controls.Add(this.label15);
-            this.tabPage5.Controls.Add(this.txtIsSyskeyPresent);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(414, 398);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Options";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.kryptonGroupBox1.Location = new System.Drawing.Point(-4, 0);
+            this.kryptonGroupBox1.Name = "kryptonGroupBox1";
+            // 
+            // kryptonGroupBox1.Panel
+            // 
+            this.kryptonGroupBox1.Panel.Controls.Add(this.label8);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.label3);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtZoneName);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.cmbScanList);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnSaveZoneName);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnDeleteZone);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnAddZone);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(418, 398);
+            this.kryptonGroupBox1.TabIndex = 29;
+            this.kryptonGroupBox1.Values.Heading = "";
+            // 
+            // kryptonGroupBox2
+            // 
+            this.kryptonGroupBox2.Location = new System.Drawing.Point(-4, 0);
+            this.kryptonGroupBox2.Name = "kryptonGroupBox2";
+            // 
+            // kryptonGroupBox2.Panel
+            // 
+            this.kryptonGroupBox2.Panel.Controls.Add(this.label14);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.label1);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.label13);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.btnAddChannel);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtChannelFrequncy);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.btnDeleteChannel);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.cmbChannelMode);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.btnSaveChannel);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtChannelName);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.txtTgid);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.label2);
+            this.kryptonGroupBox2.Size = new System.Drawing.Size(422, 398);
+            this.kryptonGroupBox2.TabIndex = 29;
+            this.kryptonGroupBox2.Values.Heading = "";
+            // 
+            // kryptonGroupBox3
+            // 
+            this.kryptonGroupBox3.Location = new System.Drawing.Point(0, 0);
+            this.kryptonGroupBox3.Name = "kryptonGroupBox3";
+            // 
+            // kryptonGroupBox3.Panel
+            // 
+            this.kryptonGroupBox3.Panel.Controls.Add(this.label9);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.btnAddScanList);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.cmbChannels);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.btnRemoveChannelFromScanList);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.btnDeleteScanList);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.btnAddChannelToScanList);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.btnRenameScanList);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.txtScanListName);
+            this.kryptonGroupBox3.Size = new System.Drawing.Size(411, 398);
+            this.kryptonGroupBox3.TabIndex = 28;
+            this.kryptonGroupBox3.Values.Heading = "";
+            // 
+            // kryptonGroupBox4
+            // 
+            this.kryptonGroupBox4.Location = new System.Drawing.Point(0, 0);
+            this.kryptonGroupBox4.Name = "kryptonGroupBox4";
+            // 
+            // kryptonGroupBox4.Panel
+            // 
+            this.kryptonGroupBox4.Panel.Controls.Add(this.kryptonLabel4);
+            this.kryptonGroupBox4.Panel.Controls.Add(this.kryptonLabel3);
+            this.kryptonGroupBox4.Panel.Controls.Add(this.kryptonLabel2);
+            this.kryptonGroupBox4.Panel.Controls.Add(this.kryptonLabel1);
+            this.kryptonGroupBox4.Panel.Controls.Add(this.label10);
+            this.kryptonGroupBox4.Panel.Controls.Add(this.txtPassword);
+            this.kryptonGroupBox4.Panel.Controls.Add(this.cmbTtsEnabled);
+            this.kryptonGroupBox4.Panel.Controls.Add(this.cmbControlHead);
+            this.kryptonGroupBox4.Panel.Controls.Add(this.txtHomeSysID);
+            this.kryptonGroupBox4.Panel.Controls.Add(this.cmbRadioMode);
+            this.kryptonGroupBox4.Size = new System.Drawing.Size(411, 398);
+            this.kryptonGroupBox4.TabIndex = 24;
+            this.kryptonGroupBox4.Values.Heading = "";
+            // 
+            // kryptonGroupBox5
+            // 
+            this.kryptonGroupBox5.Location = new System.Drawing.Point(-4, 0);
+            this.kryptonGroupBox5.Name = "kryptonGroupBox5";
+            // 
+            // kryptonGroupBox5.Panel
+            // 
+            this.kryptonGroupBox5.Panel.Controls.Add(this.kryptonGroupBox6);
+            this.kryptonGroupBox5.Panel.Controls.Add(this.kryptonLabel5);
+            this.kryptonGroupBox5.Panel.Controls.Add(this.txtIsSyskeyPresent);
+            this.kryptonGroupBox5.Size = new System.Drawing.Size(418, 402);
+            this.kryptonGroupBox5.TabIndex = 33;
+            this.kryptonGroupBox5.Values.Heading = "";
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(8, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 20);
+            this.label3.TabIndex = 22;
+            this.label3.Values.Text = "Name";
+            // 
+            // label8
+            // 
+            this.label8.Location = new System.Drawing.Point(2, 36);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(60, 20);
+            this.label8.TabIndex = 23;
+            this.label8.Values.Text = "Scan List:";
+            // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(4, 90);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(67, 20);
+            this.label9.TabIndex = 27;
+            this.label9.Values.Text = "List Name:";
+            // 
+            // label10
+            // 
+            this.label10.Location = new System.Drawing.Point(45, 23);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(80, 20);
+            this.label10.TabIndex = 36;
+            this.label10.Values.Text = "TTS Enabled:";
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(12, 49);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(116, 20);
+            this.kryptonLabel1.TabIndex = 37;
+            this.kryptonLabel1.Values.Text = "Control Head Type:";
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(4, 129);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(121, 20);
+            this.kryptonLabel2.TabIndex = 38;
+            this.kryptonLabel2.Values.Text = "Codeplug Password:";
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(40, 103);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(85, 20);
+            this.kryptonLabel3.TabIndex = 39;
+            this.kryptonLabel3.Values.Text = "Home SYS ID:";
+            // 
+            // kryptonLabel4
+            // 
+            this.kryptonLabel4.Location = new System.Drawing.Point(80, 77);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(45, 20);
+            this.kryptonLabel4.TabIndex = 40;
+            this.kryptonLabel4.Values.Text = "Mode:";
+            // 
+            // kryptonLabel5
+            // 
+            this.kryptonLabel5.Location = new System.Drawing.Point(8, 3);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(122, 20);
+            this.kryptonLabel5.TabIndex = 33;
+            this.kryptonLabel5.Values.Text = "System Key Present?";
+            // 
+            // chkCpgPassword
+            // 
+            this.chkCpgPassword.Location = new System.Drawing.Point(24, 51);
+            this.chkCpgPassword.Name = "chkCpgPassword";
+            this.chkCpgPassword.Size = new System.Drawing.Size(131, 20);
+            this.chkCpgPassword.TabIndex = 34;
+            this.chkCpgPassword.Values.Text = "Codeplug Password";
+            this.chkCpgPassword.CheckedChanged += new System.EventHandler(this.chkCpgPassword_CheckedChanged);
+            // 
+            // chkSecondaryRadioTx
+            // 
+            this.chkSecondaryRadioTx.Location = new System.Drawing.Point(24, 25);
+            this.chkSecondaryRadioTx.Name = "chkSecondaryRadioTx";
+            this.chkSecondaryRadioTx.Size = new System.Drawing.Size(132, 20);
+            this.chkSecondaryRadioTx.TabIndex = 35;
+            this.chkSecondaryRadioTx.Values.Text = "Secondary Radio TX";
+            this.chkSecondaryRadioTx.CheckedChanged += new System.EventHandler(this.chkSecondaryRadioTx_CheckedChanged);
+            // 
+            // chkRequireSysKey
+            // 
+            this.chkRequireSysKey.Location = new System.Drawing.Point(24, 77);
+            this.chkRequireSysKey.Name = "chkRequireSysKey";
+            this.chkRequireSysKey.Size = new System.Drawing.Size(131, 20);
+            this.chkRequireSysKey.TabIndex = 35;
+            this.chkRequireSysKey.Values.Text = "Require System Key";
+            // 
+            // chkEnforceSysID
+            // 
+            this.chkEnforceSysID.Location = new System.Drawing.Point(24, 103);
+            this.chkEnforceSysID.Name = "chkEnforceSysID";
+            this.chkEnforceSysID.Size = new System.Drawing.Size(97, 20);
+            this.chkEnforceSysID.TabIndex = 36;
+            this.chkEnforceSysID.Values.Text = "Enforce SysID";
+            // 
+            // kryptonGroupBox6
+            // 
+            this.kryptonGroupBox6.Location = new System.Drawing.Point(8, 32);
+            this.kryptonGroupBox6.Name = "kryptonGroupBox6";
+            // 
+            // kryptonGroupBox6.Panel
+            // 
+            this.kryptonGroupBox6.Panel.Controls.Add(this.chkSecondaryRadioTx);
+            this.kryptonGroupBox6.Panel.Controls.Add(this.chkEnforceSysID);
+            this.kryptonGroupBox6.Panel.Controls.Add(this.chkCpgPassword);
+            this.kryptonGroupBox6.Panel.Controls.Add(this.chkRequireSysKey);
+            this.kryptonGroupBox6.Size = new System.Drawing.Size(213, 192);
+            this.kryptonGroupBox6.TabIndex = 37;
+            this.kryptonGroupBox6.Values.Heading = "Options";
             // 
             // Form1
             // 
@@ -942,16 +1021,6 @@
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -959,7 +1028,36 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).EndInit();
+            this.kryptonGroupBox1.Panel.ResumeLayout(false);
+            this.kryptonGroupBox1.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).EndInit();
+            this.kryptonGroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).EndInit();
+            this.kryptonGroupBox2.Panel.ResumeLayout(false);
+            this.kryptonGroupBox2.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).EndInit();
+            this.kryptonGroupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3.Panel)).EndInit();
+            this.kryptonGroupBox3.Panel.ResumeLayout(false);
+            this.kryptonGroupBox3.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3)).EndInit();
+            this.kryptonGroupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox4.Panel)).EndInit();
+            this.kryptonGroupBox4.Panel.ResumeLayout(false);
+            this.kryptonGroupBox4.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox4)).EndInit();
+            this.kryptonGroupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox5.Panel)).EndInit();
+            this.kryptonGroupBox5.Panel.ResumeLayout(false);
+            this.kryptonGroupBox5.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox5)).EndInit();
+            this.kryptonGroupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox6.Panel)).EndInit();
+            this.kryptonGroupBox6.Panel.ResumeLayout(false);
+            this.kryptonGroupBox6.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox6)).EndInit();
+            this.kryptonGroupBox6.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -981,7 +1079,6 @@
         private System.Windows.Forms.Button btnSaveZoneName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox serialNumberBox;
         private System.Windows.Forms.Label label7;
@@ -996,39 +1093,22 @@
         private System.Windows.Forms.Button btnRemoveChannelFromScanList;
         private System.Windows.Forms.TextBox txtScanListName;
         private System.Windows.Forms.ComboBox cmbScanList;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cmbTtsEnabled;
         private System.Windows.Forms.ComboBox cmbChannels;
         private System.Windows.Forms.Button btnAddScanList;
         private System.Windows.Forms.Button btnDeleteScanList;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cmbControlHead;
         private System.Windows.Forms.ComboBox cmbRadioMode;
-        private System.Windows.Forms.CheckBox chkSecondaryRadioTx;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtChannelFrequncy;
         private System.Windows.Forms.ComboBox cmbChannelMode;
         private System.Windows.Forms.Button btnLoadSysKey;
         private System.Windows.Forms.TextBox txtIsSyskeyPresent;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtHomeSysID;
-        private System.Windows.Forms.CheckBox chkRequireSysKey;
-        private System.Windows.Forms.CheckBox chkEnforceSysID;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtBornSysID;
-        private System.Windows.Forms.CheckBox chkCpgPassword;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.GroupBox groupBox6;
         private Krypton.Ribbon.KryptonRibbon kryptonRibbon1;
         private Krypton.Ribbon.KryptonRibbonTab kryptonRibbonTab1;
         private Krypton.Ribbon.KryptonRibbonGroup kryptonRibbonGroup1;
@@ -1054,6 +1134,33 @@
         private Krypton.Toolkit.KryptonContextMenuItem exitStartMenu;
         private Krypton.Toolkit.KryptonContextMenuItem loadskeyStartMenu;
         private Krypton.Ribbon.KryptonRibbonGroupButton loadskeyRibbonButton;
+        private Krypton.Ribbon.KryptonRibbonTab kryptonRibbonTab3;
+        private Krypton.Ribbon.KryptonRibbonGroup kryptonRibbonGroup3;
+        private Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple3;
+        private Krypton.Ribbon.KryptonRibbonGroupButton lightThemeButton;
+        private Krypton.Ribbon.KryptonRibbonGroupButton darkThemeButton;
+        private Krypton.Ribbon.KryptonRibbonGroupButton labThemeButton;
+        private Krypton.Ribbon.KryptonRibbonQATButton helpRibbonQButton;
+        private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox1;
+        private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox2;
+        private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox3;
+        private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox4;
+        private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox5;
+        private Krypton.Toolkit.KryptonManager kryptonManager1;
+        private Krypton.Toolkit.KryptonLabel label3;
+        private Krypton.Toolkit.KryptonLabel label8;
+        private Krypton.Toolkit.KryptonLabel label9;
+        private Krypton.Toolkit.KryptonLabel label10;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private Krypton.Toolkit.KryptonCheckBox chkEnforceSysID;
+        private Krypton.Toolkit.KryptonCheckBox chkRequireSysKey;
+        private Krypton.Toolkit.KryptonCheckBox chkSecondaryRadioTx;
+        private Krypton.Toolkit.KryptonCheckBox chkCpgPassword;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel5;
+        private Krypton.Toolkit.KryptonGroupBox kryptonGroupBox6;
     }
 }
 
