@@ -10,14 +10,23 @@ namespace TrunkScannerCPS
     {
         public List<Zone> Zones { get; set; } = new List<Zone>();
         public List<ScanList> ScanLists { get; set; } = new List<ScanList>();
+        public int RadioMode { get; set; }
+        public int ControlHead { get; set; }
+        public int LastProgramSource { get; set; }
         public string ModelNumber { get; set; }
         public string SerialNumber { get; set; }
         public string CodeplugVersion {  get; set; }
-        public int LastProgramSource { get; set; }
         public string FlickerCode { get; set; }
+        public string HomeSystemId { get; set; }
+        public string BornSystemId { get; set; }
+        public string HashedPassword { get; set; }
+        public bool EnforceSystemId { get; set; }
+        public bool RequireSysKey { get; set; }
         public bool RadioKilled { get; set; }
         public bool TrunkingInhibited { get; set; }
         public bool TtsEnabled { get; set; }
+        public bool SecondaryRadioTx { get; set; }
+        public bool IsPasswordProtected { get; set; }
 
         public bool IsValid()
         {
@@ -64,6 +73,8 @@ namespace TrunkScannerCPS
     {
         public string Alias { get; set; }
         public string Tgid { get; set; }
+        public string Frequency { get; set; }
+        public ChannelMode Mode { get; set; }
     }
 
     public class ScanList
@@ -76,6 +87,16 @@ namespace TrunkScannerCPS
     {
         public string Alias { get; set; }
         public string Tgid { get; set; }
+        public string Frequency { get; set; }
+        public ChannelMode Mode { get; set; }
+    }
+
+    public enum ChannelMode
+    {
+        P25Trunking,
+        P25Conventional,
+        AnalogConventional,
+        LTR
     }
 
     public enum CodeplugSource
@@ -84,5 +105,20 @@ namespace TrunkScannerCPS
         Depot,
         Labtool,
         PhpSplutions
+    }
+
+    public enum ControlHeadType
+    {
+        None,
+        O2,
+        E5,
+        O9
+    }
+
+    public enum RadioMode
+    {
+        Primary,
+        Secondary,
+        Single
     }
 }
