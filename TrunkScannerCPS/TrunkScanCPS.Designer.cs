@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.btnLoadCodeplug = new System.Windows.Forms.Button();
             this.txtChannelName = new System.Windows.Forms.TextBox();
@@ -572,7 +573,7 @@
             this.kryptonRibbonTab1,
             this.kryptonRibbonTab2,
             this.kryptonRibbonTab3});
-            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab3;
+            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab1;
             this.kryptonRibbon1.Size = new System.Drawing.Size(845, 143);
             this.kryptonRibbon1.TabIndex = 33;
             // 
@@ -595,6 +596,7 @@
             // exitStartMenu
             // 
             this.exitStartMenu.Text = "Exit";
+            this.exitStartMenu.Click += new System.EventHandler(this.exitStartMenu_Click);
             // 
             // kryptonRibbonTab1
             // 
@@ -1017,8 +1019,9 @@
             this.Controls.Add(this.btnSaveCodeplug);
             this.Controls.Add(this.btnLoadCodeplug);
             this.Controls.Add(this.treeView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Trunk Scanner CPS";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).EndInit();

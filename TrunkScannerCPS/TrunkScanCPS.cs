@@ -1478,5 +1478,10 @@ namespace TrunkScannerCPS
                 kryptonRibbon1.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007BlackDarkMode;
             }
         }
+
+        private void exitStartMenu_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
