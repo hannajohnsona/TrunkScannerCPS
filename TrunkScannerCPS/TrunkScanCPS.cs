@@ -105,13 +105,13 @@ namespace TrunkScannerCPS
             }
 
             treeView1.Nodes.Clear();
-
             TreeNode zonesParentNode = new TreeNode("Zones");
             treeView1.Nodes.Add(zonesParentNode);
 
             foreach (var zone in currentCodeplug.Zones)
             {
                 TreeNode zoneNode = new TreeNode(zone.Name);
+
                 foreach (var channel in zone.Channels)
                 {
                     var text = !string.IsNullOrEmpty(channel.Tgid) ? channel.Tgid : FormatFrequency(channel.Frequency);
@@ -124,6 +124,15 @@ namespace TrunkScannerCPS
 
             TreeNode scanListsParentNode = new TreeNode("Scan Lists");
             treeView1.Nodes.Add(scanListsParentNode);
+            if (treeView1.SelectedNode == scanListsParentNode)
+
+            {
+                tabControl1.SelectedTab = tabPage3;
+            }
+            else if (treeView1.SelectedNode == zonesParentNode)
+            {
+               
+            }
 
             foreach (var scanList in currentCodeplug.ScanLists)
             {
@@ -131,8 +140,10 @@ namespace TrunkScannerCPS
                 foreach (var item in scanList.Items)
                 {
                     scanListNode.Nodes.Add(new TreeNode($"{item.Alias} ({item.Tgid})"));
+                 
                 }
                 scanListsParentNode.Nodes.Add(scanListNode);
+                
             }
 
 
@@ -248,7 +259,7 @@ namespace TrunkScannerCPS
             {
                 txtZoneName.Text = e.Node.Text;
                 Zone selectedZone = currentCodeplug.Zones.FirstOrDefault(z => z.Name == e.Node.Text);
-
+                tabControl1.SelectedTab = tabPage1;
                 if (selectedZone != null)
                 {
                     PopulateScanListComboBox(selectedZone.ScanListName);
@@ -266,7 +277,7 @@ namespace TrunkScannerCPS
                         .SelectMany(z => z.Channels)
                         .FirstOrDefault(c => c.Alias == txtChannelName.Text &&
                             (c.Tgid == identifier || FormatFrequency(c.Frequency) == identifier));
-
+                    tabControl1.SelectedTab = tabPage2;
                     if (selectedChannel != null)
                     {
                         txtTgid.Text = selectedChannel.Tgid;
@@ -283,6 +294,7 @@ namespace TrunkScannerCPS
             }
             else if (e.Node.Level == 1 && e.Node.Parent != null && e.Node.Parent.Text == "Scan Lists")
             {
+                tabControl1.SelectedTab = tabPage3;
                 txtScanListName.Text = e.Node.Text;
                 var scanList = currentCodeplug.ScanLists.FirstOrDefault(sl => sl.Name == e.Node.Text);
                 if (scanList != null)

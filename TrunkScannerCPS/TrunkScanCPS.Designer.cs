@@ -91,30 +91,30 @@
             this.chkCpgPassword = new System.Windows.Forms.CheckBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.kryptonRibbon1 = new Krypton.Ribbon.KryptonRibbon();
+            this.openRibbonQButton = new Krypton.Ribbon.KryptonRibbonQATButton();
+            this.saveRibbonQButton = new Krypton.Ribbon.KryptonRibbonQATButton();
+            this.openStartMenu = new Krypton.Toolkit.KryptonContextMenuItem();
+            this.saveStartMenu = new Krypton.Toolkit.KryptonContextMenuItem();
+            this.loadskeyStartMenu = new Krypton.Toolkit.KryptonContextMenuItem();
+            this.kryptonContextMenuSeparator1 = new Krypton.Toolkit.KryptonContextMenuSeparator();
+            this.exitStartMenu = new Krypton.Toolkit.KryptonContextMenuItem();
             this.kryptonRibbonTab1 = new Krypton.Ribbon.KryptonRibbonTab();
+            this.kryptonRibbonGroup1 = new Krypton.Ribbon.KryptonRibbonGroup();
+            this.kryptonRibbonGroupTriple1 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.readCodeplugRibbonButton = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.saveCodeplugRibbonButton = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonTab2 = new Krypton.Ribbon.KryptonRibbonTab();
+            this.kryptonRibbonGroup2 = new Krypton.Ribbon.KryptonRibbonGroup();
+            this.kryptonRibbonGroupTriple2 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.readDeviceRibbonButton = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.writeDeviceRibbonButton = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.loadskeyRibbonButton = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.openStartMenu = new Krypton.Toolkit.KryptonContextMenuItem();
-            this.saveStartMenu = new Krypton.Toolkit.KryptonContextMenuItem();
-            this.kryptonContextMenuSeparator1 = new Krypton.Toolkit.KryptonContextMenuSeparator();
-            this.exitStartMenu = new Krypton.Toolkit.KryptonContextMenuItem();
-            this.loadskeyStartMenu = new Krypton.Toolkit.KryptonContextMenuItem();
-            this.openRibbonQButton = new Krypton.Ribbon.KryptonRibbonQATButton();
-            this.saveRibbonQButton = new Krypton.Ribbon.KryptonRibbonQATButton();
-            this.kryptonRibbonGroup1 = new Krypton.Ribbon.KryptonRibbonGroup();
-            this.kryptonRibbonGroupTriple1 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
-            this.readCodeplugRibbonButton = new Krypton.Ribbon.KryptonRibbonGroupButton();
-            this.saveCodeplugRibbonButton = new Krypton.Ribbon.KryptonRibbonGroupButton();
-            this.kryptonRibbonGroup2 = new Krypton.Ribbon.KryptonRibbonGroup();
-            this.kryptonRibbonGroupTriple2 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
-            this.readDeviceRibbonButton = new Krypton.Ribbon.KryptonRibbonGroupButton();
-            this.writeDeviceRibbonButton = new Krypton.Ribbon.KryptonRibbonGroupButton();
-            this.loadskeyRibbonButton = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -749,9 +749,41 @@
             this.kryptonRibbon1.RibbonTabs.AddRange(new Krypton.Ribbon.KryptonRibbonTab[] {
             this.kryptonRibbonTab1,
             this.kryptonRibbonTab2});
-            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab2;
+            this.kryptonRibbon1.SelectedContext = null;
+            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab1;
             this.kryptonRibbon1.Size = new System.Drawing.Size(845, 143);
             this.kryptonRibbon1.TabIndex = 33;
+            // 
+            // openRibbonQButton
+            // 
+            this.openRibbonQButton.Image = global::TrunkScannerCPS.Properties.Resources.Read_16x16;
+            this.openRibbonQButton.Click += new System.EventHandler(this.openRibbonQButton_Click);
+            // 
+            // saveRibbonQButton
+            // 
+            this.saveRibbonQButton.Enabled = false;
+            this.saveRibbonQButton.Image = global::TrunkScannerCPS.Properties.Resources.Save_16x16;
+            this.saveRibbonQButton.Click += new System.EventHandler(this.saveRibbonQButton_Click);
+            // 
+            // openStartMenu
+            // 
+            this.openStartMenu.Text = "Open Codeplug";
+            this.openStartMenu.Click += new System.EventHandler(this.openStartMenu_Click);
+            // 
+            // saveStartMenu
+            // 
+            this.saveStartMenu.Enabled = false;
+            this.saveStartMenu.Text = "Save Codeplug";
+            this.saveStartMenu.Click += new System.EventHandler(this.saveStartMenu_Click);
+            // 
+            // loadskeyStartMenu
+            // 
+            this.loadskeyStartMenu.Text = "Load System Key";
+            this.loadskeyStartMenu.Click += new System.EventHandler(this.loadskeyStartMenu_Click);
+            // 
+            // exitStartMenu
+            // 
+            this.exitStartMenu.Text = "Exit";
             // 
             // kryptonRibbonTab1
             // 
@@ -759,11 +791,70 @@
             this.kryptonRibbonGroup1});
             this.kryptonRibbonTab1.Text = "Codeplug";
             // 
+            // kryptonRibbonGroup1
+            // 
+            this.kryptonRibbonGroup1.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupContainer[] {
+            this.kryptonRibbonGroupTriple1});
+            this.kryptonRibbonGroup1.TextLine1 = " ";
+            // 
+            // kryptonRibbonGroupTriple1
+            // 
+            this.kryptonRibbonGroupTriple1.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.readCodeplugRibbonButton,
+            this.saveCodeplugRibbonButton});
+            // 
+            // readCodeplugRibbonButton
+            // 
+            this.readCodeplugRibbonButton.ImageLarge = global::TrunkScannerCPS.Properties.Resources.Read_64x64;
+            this.readCodeplugRibbonButton.TextLine1 = "Read";
+            this.readCodeplugRibbonButton.TextLine2 = "Codeplug";
+            this.readCodeplugRibbonButton.Click += new System.EventHandler(this.readCodeplugRibbonButton_Click);
+            // 
+            // saveCodeplugRibbonButton
+            // 
+            this.saveCodeplugRibbonButton.Enabled = false;
+            this.saveCodeplugRibbonButton.ImageLarge = global::TrunkScannerCPS.Properties.Resources.Save_64x64;
+            this.saveCodeplugRibbonButton.TextLine1 = "Save";
+            this.saveCodeplugRibbonButton.TextLine2 = "Codeplug";
+            this.saveCodeplugRibbonButton.Click += new System.EventHandler(this.saveCodeplugRibbonButton_Click);
+            // 
             // kryptonRibbonTab2
             // 
             this.kryptonRibbonTab2.Groups.AddRange(new Krypton.Ribbon.KryptonRibbonGroup[] {
             this.kryptonRibbonGroup2});
             this.kryptonRibbonTab2.Text = "Device";
+            // 
+            // kryptonRibbonGroup2
+            // 
+            this.kryptonRibbonGroup2.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupContainer[] {
+            this.kryptonRibbonGroupTriple2});
+            this.kryptonRibbonGroup2.TextLine1 = " ";
+            // 
+            // kryptonRibbonGroupTriple2
+            // 
+            this.kryptonRibbonGroupTriple2.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.readDeviceRibbonButton,
+            this.writeDeviceRibbonButton,
+            this.loadskeyRibbonButton});
+            // 
+            // readDeviceRibbonButton
+            // 
+            this.readDeviceRibbonButton.ImageLarge = global::TrunkScannerCPS.Properties.Resources.openc_64x64;
+            this.readDeviceRibbonButton.TextLine1 = "Read";
+            this.readDeviceRibbonButton.TextLine2 = "Device";
+            // 
+            // writeDeviceRibbonButton
+            // 
+            this.writeDeviceRibbonButton.ImageLarge = global::TrunkScannerCPS.Properties.Resources.codeplugs_64x64;
+            this.writeDeviceRibbonButton.TextLine1 = "Write ";
+            this.writeDeviceRibbonButton.TextLine2 = "Device";
+            // 
+            // loadskeyRibbonButton
+            // 
+            this.loadskeyRibbonButton.ImageLarge = global::TrunkScannerCPS.Properties.Resources.key_64x64;
+            this.loadskeyRibbonButton.TextLine1 = "Load";
+            this.loadskeyRibbonButton.TextLine2 = "SysKey";
+            this.loadskeyRibbonButton.Click += new System.EventHandler(this.loadskeyRibbonButton_Click);
             // 
             // tabControl1
             // 
@@ -834,96 +925,6 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Options";
             this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // openStartMenu
-            // 
-            this.openStartMenu.Text = "Open Codeplug";
-            this.openStartMenu.Click += new System.EventHandler(this.openStartMenu_Click);
-            // 
-            // saveStartMenu
-            // 
-            this.saveStartMenu.Enabled = false;
-            this.saveStartMenu.Text = "Save Codeplug";
-            this.saveStartMenu.Click += new System.EventHandler(this.saveStartMenu_Click);
-            // 
-            // exitStartMenu
-            // 
-            this.exitStartMenu.Text = "Exit";
-            // 
-            // loadskeyStartMenu
-            // 
-            this.loadskeyStartMenu.Text = "Load System Key";
-            this.loadskeyStartMenu.Click += new System.EventHandler(this.loadskeyStartMenu_Click);
-            // 
-            // openRibbonQButton
-            // 
-            this.openRibbonQButton.Image = global::TrunkScannerCPS.Properties.Resources.Read_16x16;
-            this.openRibbonQButton.Click += new System.EventHandler(this.openRibbonQButton_Click);
-            // 
-            // saveRibbonQButton
-            // 
-            this.saveRibbonQButton.Enabled = false;
-            this.saveRibbonQButton.Image = global::TrunkScannerCPS.Properties.Resources.Save_16x16;
-            this.saveRibbonQButton.Click += new System.EventHandler(this.saveRibbonQButton_Click);
-            // 
-            // kryptonRibbonGroup1
-            // 
-            this.kryptonRibbonGroup1.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupContainer[] {
-            this.kryptonRibbonGroupTriple1});
-            this.kryptonRibbonGroup1.TextLine1 = " ";
-            // 
-            // kryptonRibbonGroupTriple1
-            // 
-            this.kryptonRibbonGroupTriple1.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupItem[] {
-            this.readCodeplugRibbonButton,
-            this.saveCodeplugRibbonButton});
-            // 
-            // readCodeplugRibbonButton
-            // 
-            this.readCodeplugRibbonButton.ImageLarge = global::TrunkScannerCPS.Properties.Resources.Read_64x64;
-            this.readCodeplugRibbonButton.TextLine1 = "Read";
-            this.readCodeplugRibbonButton.TextLine2 = "Codeplug";
-            this.readCodeplugRibbonButton.Click += new System.EventHandler(this.readCodeplugRibbonButton_Click);
-            // 
-            // saveCodeplugRibbonButton
-            // 
-            this.saveCodeplugRibbonButton.Enabled = false;
-            this.saveCodeplugRibbonButton.ImageLarge = global::TrunkScannerCPS.Properties.Resources.Save_64x64;
-            this.saveCodeplugRibbonButton.TextLine1 = "Save";
-            this.saveCodeplugRibbonButton.TextLine2 = "Codeplug";
-            this.saveCodeplugRibbonButton.Click += new System.EventHandler(this.saveCodeplugRibbonButton_Click);
-            // 
-            // kryptonRibbonGroup2
-            // 
-            this.kryptonRibbonGroup2.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupContainer[] {
-            this.kryptonRibbonGroupTriple2});
-            this.kryptonRibbonGroup2.TextLine1 = " ";
-            // 
-            // kryptonRibbonGroupTriple2
-            // 
-            this.kryptonRibbonGroupTriple2.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupItem[] {
-            this.readDeviceRibbonButton,
-            this.writeDeviceRibbonButton,
-            this.loadskeyRibbonButton});
-            // 
-            // readDeviceRibbonButton
-            // 
-            this.readDeviceRibbonButton.ImageLarge = global::TrunkScannerCPS.Properties.Resources.openc_64x64;
-            this.readDeviceRibbonButton.TextLine1 = "Read";
-            this.readDeviceRibbonButton.TextLine2 = "Device";
-            // 
-            // writeDeviceRibbonButton
-            // 
-            this.writeDeviceRibbonButton.ImageLarge = global::TrunkScannerCPS.Properties.Resources.codeplugs_64x64;
-            this.writeDeviceRibbonButton.TextLine1 = "Write ";
-            this.writeDeviceRibbonButton.TextLine2 = "Device";
-            // 
-            // loadskeyRibbonButton
-            // 
-            this.loadskeyRibbonButton.ImageLarge = global::TrunkScannerCPS.Properties.Resources.key_64x64;
-            this.loadskeyRibbonButton.TextLine1 = "Load";
-            this.loadskeyRibbonButton.TextLine2 = "SysKey";
-            this.loadskeyRibbonButton.Click += new System.EventHandler(this.loadskeyRibbonButton_Click);
             // 
             // Form1
             // 
